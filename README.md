@@ -13,7 +13,7 @@ First the training images were partitioned into block patches. Due to data infor
 Then, we applied the K-SVD algorithm for dictionary learning and trained a dictionary for each class. We considered the number of dictionary atoms enough larger than the size of blocks. The dictionary was initialized with the training patches randomly. The algorithm found sparse coefficient for approximations of the training images whilst it preserved the dictionary fixed. Then vice versa, i.e. the dictionary was optimized during the sparse coefficients were kept fixed. This process was repeated until sparsity or representation error reach to a specific value.
 ### Classification phase
 Our classification method had a two-phase process comprising:
- #### Finding the best atoms:
+- #### Finding the best atoms:
 Due to discrimination of dictionaries, best dictionary atoms were selected. In contrast to the other methods, we used the resulting coefficient matrix in the training phase for classification phase. Best atoms have largest elements in sparse coefficient matrix. In this phase, effect of each dictionary atom for representation of images was considered. Atoms with maximum coefficients have more effect for approximating signals. Elements of i-th atom multiply by elements of i-th row of sparse coefficient matrix. So for performance of i-th atom we were considered these elements. Maximum coefficients in each row of sparse coefficient matrix were computed. Then atoms with maximum coefficients remained. ‎0shows sparse coding coefficients energy diagram for normal class. As is clear from one point to the next atom weights change too much, so we consider atoms in this range as the best atoms.
 
 ![image](https://github.com/NarjesKarami/Classification-of-eye-Fundus-images-based-on-dictionary-learning-method/assets/78353927/871b03af-e611-4680-b3c6-25227d4052ad)\
@@ -23,7 +23,7 @@ For discriminating of the dictionaries, in each class, we removed atoms with hig
 <img width="450" alt="image" src="https://github.com/NarjesKarami/Classification-of-eye-Fundus-images-based-on-dictionary-learning-method/assets/78353927/788e8a35-3e6c-4089-a14f-ca86602510f9">\
 Fig3. The discrimination best dictionaries of (a) normal and (b) diabetic classes. \
 
-#### Classification of test images 
+- #### Classification of test images 
 Each test image was divided into overlapping patches. Test images were classified based on using obtained dictionaries of each class. We used the sparse coding coefficients of each class for image classification, instead of reconstruction error. For a test image, we first computed its sparse representation coefficient and then according to L0-norm of coding coefficient we classified a testing image.
 ### Results and validation
 We evaluated the proposed method on 60 right and left fundus images from a public dataset available at (http://misp.mui.ac.ir/). Each image was in JPG format with size 576×720 pixels. For training phase, 20 fundus images for each class were selected, randomly. 40 images and 15 images were used for normal and diabetic test images, respectively. In this work green cannel of fundus RGB image was used. In our experiments, the size of block patches was 20×20 pixels. The blocks had 50% overlapping. The number of dictionary atoms was considered 1600. Correlation coefficient was set to 0.72. The sensitivity and specificity of our method were 88% and 93% respectively. The DSC of the model was 92%.
