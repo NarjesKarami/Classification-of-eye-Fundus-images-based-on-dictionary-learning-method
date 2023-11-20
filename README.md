@@ -21,7 +21,7 @@ Fig2. Coefficients energy diagram
 
 For discriminating of the dictionaries, in each class, we removed atoms with high correlation between atoms of other classes. Fig.3 shows the discrimination best dictionaries of normal and diabetic classes. As it can be seen in Fig.3 (b), atoms like vessels are removed from the dictionaries of diabetic class to have best discriminating atoms of this class.\
 <img width="450" alt="image" src="https://github.com/NarjesKarami/Classification-of-eye-Fundus-images-based-on-dictionary-learning-method/assets/78353927/788e8a35-3e6c-4089-a14f-ca86602510f9">\
-Fig3. The discrimination best dictionaries of (a) normal and (b) diabetic classes. \
+Fig3. The discrimination best dictionaries of (a) normal and (b) diabetic classes. 
 
 - #### Classification of test images 
 Each test image was divided into overlapping patches. Test images were classified based on using obtained dictionaries of each class. We used the sparse coding coefficients of each class for image classification, instead of reconstruction error. For a test image, we first computed its sparse representation coefficient and then according to L0-norm of coding coefficient we classified a testing image.
