@@ -6,6 +6,7 @@ Diabetic retinopathy (DR) is a chronic eye disease characterized by degenerative
 We used dictionary learning (DL) based method for classification of eye fundus images. One useful representative DL method for image processing tasks is the K-SVD algorithm. We used this algorithm for designing a dictionary that leads to the best representation for a set of given images. The K-SVD algorithm designs a dictionary using singular value decomposition (SVD) under strict sparsity constraints and it is a generalization of K-means clustering approach. K-SVD algorithm has good representational power but it does not focus on discrimination capability. In our approach, dictionaries had been discriminated. The procedure of our method is shown in Fig.1.
 
 ![image](https://github.com/NarjesKarami/Classification-of-eye-Fundus-images-based-on-dictionary-learning-method/assets/78353927/af38e50a-ec2f-4a4c-970d-90ba1c120d73) 
+
 Fig.1. The proposed algorithm for classification of color fundus images
 
 ### Learning of dictionaries
